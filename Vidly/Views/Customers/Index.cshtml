@@ -1,0 +1,40 @@
+﻿@model  IEnumerable<Vidly.Models.Customer>
+@{
+    ViewBag.Title = "Lista klientów";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista klientów</h2>
+<p>
+    @Html.ActionLink("Nowy Klient", "New", "Customers", null, new { @class = "btn btn-primary" })
+</p>
+@if (Model.Any())
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <td>Imię</td>
+                <td>Nazwisko</td>
+                <td>Rodzaj konta</td>
+                <td>Zniżka</td>
+            </tr>
+        </thead>
+
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(customer.Name, "Edit", "Customers", new { id = customer.Id }, null)</td>
+                <td>@Html.ActionLink(customer.Surname, "Details", "Customers", new { id = customer.Id }, null)</td>
+                <td>@customer.MembershipType.Name</td>
+                <td>@customer.MembershipType.DiscountRate%</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <div class="alert alert-info">
+        <strong>Info!</strong> Brak klientów do wyświetlenia.
+    </div>
+}
+

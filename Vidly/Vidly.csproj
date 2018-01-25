@@ -190,18 +190,98 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801232011111_1.cs" />
+    <Compile Include="Migrations\201801232011111_1.Designer.cs">
+      <DependentUpon>201801232011111_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801232020053_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201801232020053_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201801232020053_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801232039551_AddMemberShipType.cs" />
+    <Compile Include="Migrations\201801232039551_AddMemberShipType.Designer.cs">
+      <DependentUpon>201801232039551_AddMemberShipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801240827399_AddMemberShipTypes.cs" />
+    <Compile Include="Migrations\201801240827399_AddMemberShipTypes.Designer.cs">
+      <DependentUpon>201801240827399_AddMemberShipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801240849206_AddNamesToMembershipTypes.cs" />
+    <Compile Include="Migrations\201801240849206_AddNamesToMembershipTypes.Designer.cs">
+      <DependentUpon>201801240849206_AddNamesToMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801240917397_Birthday.cs" />
+    <Compile Include="Migrations\201801240917397_Birthday.Designer.cs">
+      <DependentUpon>201801240917397_Birthday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801241027373_Genre.cs" />
+    <Compile Include="Migrations\201801241027373_Genre.Designer.cs">
+      <DependentUpon>201801241027373_Genre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801241313489_DodawanieCustomera.cs" />
+    <Compile Include="Migrations\201801241313489_DodawanieCustomera.Designer.cs">
+      <DependentUpon>201801241313489_DodawanieCustomera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801241744242_PierdolyMovies.cs" />
+    <Compile Include="Migrations\201801241744242_PierdolyMovies.Designer.cs">
+      <DependentUpon>201801241744242_PierdolyMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801241816571_pierdoly.cs" />
+    <Compile Include="Migrations\201801241816571_pierdoly.Designer.cs">
+      <DependentUpon>201801241816571_pierdoly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801241832045_nowa.cs" />
+    <Compile Include="Migrations\201801241832045_nowa.Designer.cs">
+      <DependentUpon>201801241832045_nowa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801242035111_nowabaza.cs" />
+    <Compile Include="Migrations\201801242035111_nowabaza.Designer.cs">
+      <DependentUpon>201801242035111_nowabaza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801242040057_baza2.cs" />
+    <Compile Include="Migrations\201801242040057_baza2.Designer.cs">
+      <DependentUpon>201801242040057_baza2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801242123221_jsvalid.cs" />
+    <Compile Include="Migrations\201801242123221_jsvalid.Designer.cs">
+      <DependentUpon>201801242123221_jsvalid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801251358027_byte_instock.cs" />
+    <Compile Include="Migrations\201801251358027_byte_instock.Designer.cs">
+      <DependentUpon>201801251358027_byte_instock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801251402327_byte_instock2.cs" />
+    <Compile Include="Migrations\201801251402327_byte_instock2.Designer.cs">
+      <DependentUpon>201801251402327_byte_instock2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801251407373_dziala.cs" />
+    <Compile Include="Migrations\201801251407373_dziala.Designer.cs">
+      <DependentUpon>201801251407373_dziala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YearsIfAMember.cs" />
+    <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
+    <Compile Include="ViewModels\RandomViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -258,6 +338,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Movies\Random.cshtml" />
+    <Content Include="Views\Shared\_headerNavBar.cshtml" />
+    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -274,6 +362,59 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801232011111_1.resx">
+      <DependentUpon>201801232011111_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801232020053_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201801232020053_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801232039551_AddMemberShipType.resx">
+      <DependentUpon>201801232039551_AddMemberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801240827399_AddMemberShipTypes.resx">
+      <DependentUpon>201801240827399_AddMemberShipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801240849206_AddNamesToMembershipTypes.resx">
+      <DependentUpon>201801240849206_AddNamesToMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801240917397_Birthday.resx">
+      <DependentUpon>201801240917397_Birthday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801241027373_Genre.resx">
+      <DependentUpon>201801241027373_Genre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801241313489_DodawanieCustomera.resx">
+      <DependentUpon>201801241313489_DodawanieCustomera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801241744242_PierdolyMovies.resx">
+      <DependentUpon>201801241744242_PierdolyMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801241816571_pierdoly.resx">
+      <DependentUpon>201801241816571_pierdoly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801241832045_nowa.resx">
+      <DependentUpon>201801241832045_nowa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801242035111_nowabaza.resx">
+      <DependentUpon>201801242035111_nowabaza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801242040057_baza2.resx">
+      <DependentUpon>201801242040057_baza2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801242123221_jsvalid.resx">
+      <DependentUpon>201801242123221_jsvalid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801251358027_byte_instock.resx">
+      <DependentUpon>201801251358027_byte_instock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801251402327_byte_instock2.resx">
+      <DependentUpon>201801251402327_byte_instock2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801251407373_dziala.resx">
+      <DependentUpon>201801251407373_dziala.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

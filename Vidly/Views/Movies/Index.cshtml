@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Vidly.Models.Movie>
+@{
+    ViewBag.Title = "Lista filmów";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista filmów</h2>
+<div class="form-group">
+    @Html.ActionLink("Nowy Film", "Add", "Movies", null, new { @class = "btn btn-primary" })
+</div>
+
+
+@if (Model.Any())
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <td>Nazwa</td>
+                <td>Data wydania</td>
+                <td>Data dodania</td>
+                <td>Rodzaj</td>
+                <td>Numer na stoku</td>
+            </tr>
+        </thead>
+
+        @foreach (var movies in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(movies.Name, "Edit", "Movies", new { id = movies.Id }, null)</td>
+                <td>@movies.ReleaseDate.ToString("dd MMM yyyy")</td>
+                <td>@movies.AddedDate.ToString("dd.MM.yyyy")</td>
+                <td>@Html.ActionLink(movies.Genre.Name, "Details", "Movies", new { id = movies.Id }, null)</td>
+                <td>@movies.NumberInStock</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <div class="alert alert-info">
+        <strong>Info!</strong> Brak klientów do wyświetlenia.
+    </div>
+}
